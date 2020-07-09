@@ -1,7 +1,7 @@
 # PlanilhaFinanceira
 Planilha de controle de gastos e investimentos (pq eu estava entediado)
 
-##Frameworks Utilizadas
+## Frameworks Utilizadas
 
 ### BackEnd
 .Net Core 3.1
