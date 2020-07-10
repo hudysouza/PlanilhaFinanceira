@@ -1,9 +1,8 @@
 <template>
   <div />
 </template>
-
 <script>
 export default {
-  name: 'HomePage'
+  name: 'Config'
 }
 </script>

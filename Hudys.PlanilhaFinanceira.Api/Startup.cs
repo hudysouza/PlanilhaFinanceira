@@ -1,3 +1,7 @@
+using AutoMapper;
+using Hudys.PlanilhaFinanceira.Application.Mapping.Profiles;
+using Hudys.PlanilhaFinanceira.Application.Services;
+using Hudys.PlanilhaFinanceira.Domain.Interfaces;
 using Hudys.PlanilhaFinanceira.Infra.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +32,16 @@ namespace Hudys.PlanilhaFinanceira.Api
 
             services.AddEntityFrameworkNpgsql();
             services.AddDbContext<PlanilhaFinanceiraDbContext>(options => options.UseNpgsql(connection, b => b.MigrationsAssembly("Hudys.PlanilhaFinanceira.Infra.Data")));
+
+            services.AddScoped<ITransactionTypeService, TransactionTypeService>();
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new TransactionTypeProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

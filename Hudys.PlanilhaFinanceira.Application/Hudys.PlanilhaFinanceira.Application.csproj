@@ -2,6 +2,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hudys.PlanilhaFinanceira.Domain\Hudys.PlanilhaFinanceira.Domain.csproj" />
+    <ProjectReference Include="..\Hudys.PlanilhaFinanceira.Infra.Data\Hudys.PlanilhaFinanceira.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
   </ItemGroup>
 
   <PropertyGroup>

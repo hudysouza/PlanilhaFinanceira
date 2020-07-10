@@ -35,6 +35,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~plugins/buefy.js'
   ],
   /*
   ** Auto import components
@@ -52,8 +53,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa'

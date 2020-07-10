@@ -2,11 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hudys.PlanilhaFinanceira.Domain\Hudys.PlanilhaFinanceira.Domain.csproj" />
-    <ProjectReference Include="..\Hudys.PlanilhaFinanceira.Service\Hudys.PlanilhaFinanceira.Service.csproj" />
+    <ProjectReference Include="..\Hudys.PlanilhaFinanceira.Application\Hudys.PlanilhaFinanceira.Application.csproj" />
     <ProjectReference Include="..\Hudys.PlanilhaFinanceira.Infra.Data\Hudys.PlanilhaFinanceira.Infra.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
